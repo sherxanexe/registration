@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            function checkPassword(form) {
+                password1 = form.password1.value;
+                password2 = form.password2.value;
+
+                
+                 if (password1 != password2) {
+                    alert ("\nPassword did not match: Please try again...")
+                    return false;
+                }
+
+                
+                else{
+                    alert("Password Match: Welcome to Company!")
+                    return true;
+                }
+            }
+            
+             if(document.getElementById("username", "password", "cpassword").value.length == 0)
+                {
+                    document.getElementById("btnsubmit").style.visibility="hidden";
+                }
+                else{
+                    document.getElementById("btnsubmit").style.visibility="visible";
+                }
+        </script>
+        <style>
+            .company {
+                font-size:40px;
+                color:blueviolet;
+                font-weight:bold;
+                text-align:center;
+            }
+            .workers {
+                font-size:17px;
+                text-align:center;
+                margin-bottom:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "company">Company</div>
+        <div class = "workers">Small text about nothing</div>
+        <form onSubmit = "return checkPassword(this)">
+        <table border = 1 align = "center">
+            <tr>
+                <!-- Enter Username -->
+                <td>Username:</td>
+                <td><input type = text name = name size = 25 id="login" required></td>
+            </tr>
+            <tr>
+                <!-- Enter Password. -->
+                <td>Password:</td>
+                <td><input type = password name = password1 size = 25 id="password" required></td>
+            </tr>
+            <tr>
+                <!-- To Confirm Password. -->
+                <td>Confirm Password:</td>
+                <td><input type = password name = password2 size = 25 id="Confirm" required></td>
+            </tr>
+            <tr>
+                <td colspan = 2>
+                <input type = submit value = "Submit" id="btnsubmit">
+            </td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>
